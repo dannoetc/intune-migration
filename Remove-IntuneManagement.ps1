@@ -51,7 +51,7 @@ function Remove-IntuneMgmt {
 
 }
 
-Write-Output "Writing Run Once for Post Reboot 2" 
+Write-Output "Writing RunOnce for kicking off Entra join" 
 $RunOnceKey = "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
 
 Set-ItemProperty $RunOnceKey "NextRun" ('C:\Windows\System32\WindowsPowerShell\v1.0\Powershell.exe -executionPolicy Unrestricted -File ' + "$PsScriptRoot\Enroll-IntuneManagement.ps1")

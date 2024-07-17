@@ -5,6 +5,6 @@ $PPKGName = "ITX.ppkg"
 Write-Output "Installing provisioning package..." 
 Install-ProvisioningPackage -PackagePath "$PsScriptRoot\$PPKGName" -ForceInstall -QuietInstall
 
-Write-Output "Restarting PC!" 
+Write-Output "Restarting PC for great justice" 
 
 Restart-Computer
